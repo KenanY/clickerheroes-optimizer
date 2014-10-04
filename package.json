@@ -5,8 +5,9 @@
   "author": "Kenan Yildirim <kenan@kenany.me> (http://kenany.me/)",
   "main": "client",
   "scripts": {
-    "build": "browserify client > static/bundle.js",
-    "size": "browserify client | uglifyjs -c warnings=false -m | gzip | wc -c | pretty-bytes",
+    "build": "browserify client -p bundle-collapser/plugin > static/bundle.js",
+    "minify": "npm run build && uglifyjs -c warnings=false -m < static/bundle.js > static/bundle.min.js",
+    "size": "npm run minify && gzip < static/bundle.min.js | wc -c | pretty-bytes",
     "watch": "watchify client -o static/bundle.js -dv & nodemon server.js"
   },
   "private": true,
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "browserify": "^5.13.0",
+    "bundle-collapser": "^1.1.0",
     "node-static": "^0.7.6",
     "nodemon": "^1.2.1",
     "pretty-bytes": "^1.0.1",
