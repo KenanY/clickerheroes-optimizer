@@ -1,9 +1,20 @@
+@import "fluidity/normalize"
+@import "fluidity/semantic-grid"
+
+.main
+  grid()
+  .textarea
+    grid-space(25%)
+  .table
+    grid-space(30%)
+  .output
+    grid-space(45%)
+
 table {
   border: 2px solid black;
 }
 
 th, td {
-  overflow: hidden;
   white-space: nowrap;
 }
 
@@ -17,28 +28,15 @@ td {
   border-bottom: 1px solid #ccc;
 }
 
-.main {
-  height: 20rem;
-}
-
-.main > div {
-  float: left;
-  height: 100%;
-  width: 50%;
-}
-
 .textarea > textarea {
-  left: 0;
-  position: absolute;
   resize: none;
-  top: 0;
+  width: 75%;
 }
 
 .textarea > textarea,
 .textarea > pre {
   background: transparent;
   font: inherit;
-  padding: 5px;
   white-space: pre-wrap;
   word-wrap: break-word;
 }

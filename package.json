@@ -8,12 +8,15 @@
     "build": "browserify client -p bundle-collapser/plugin > static/bundle.js",
     "minify": "npm run build && uglifyjs -c warnings=false -m < static/bundle.js > static/bundle.min.js",
     "size": "npm run minify && gzip < static/bundle.min.js | wc -c | pretty-bytes",
-    "watch": "watchify client -o static/bundle.js -dv & nodemon server.js"
+    "watch": "npm run watch-js & npm run watch-css & nodemon server.js",
+    "watch-js": "watchify client -o static/bundle.js -dv",
+    "watch-css": "stylus -u fluidity css/main.styl -o static/ -w"
   },
   "private": true,
   "dependencies": {
     "clickerheroes-save": "^1.0.0",
     "dom-delegator": "^10.0.0",
+    "fluidity": "^0.2.0",
     "geval": "^2.1.1",
     "global": "^4.2.1",
     "main-loop": "^2.3.0",
@@ -29,6 +32,7 @@
     "node-static": "^0.7.6",
     "nodemon": "^1.2.1",
     "pretty-bytes": "^1.0.1",
+    "stylus": "^0.49.1",
     "watchify": "^1.0.6"
   }
 }

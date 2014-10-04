@@ -45,8 +45,10 @@ function render(state) {
         h('br')
       ])
     ]),
+    h('.table', [
+      table(state)
+    ]),
     h('.output', [
-      table(state),
       list(state)
     ])
   ]);
