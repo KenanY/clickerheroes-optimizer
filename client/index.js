@@ -4,7 +4,6 @@ var struct = require('observ-struct');
 var mainLoop = require('main-loop');
 var h = require('virtual-hyperscript');
 var delegator = require('dom-delegator');
-var changeEvent = require('value-event/change');
 var parseSave = require('clickerheroes-save');
 var MultipleEvent = require('geval/multiple');
 
