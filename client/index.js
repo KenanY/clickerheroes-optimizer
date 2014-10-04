@@ -1,7 +1,6 @@
 var document = require('global/document');
 var value = require('observ');
 var struct = require('observ-struct');
-var array = require('observ-array');
 var mainLoop = require('main-loop');
 var h = require('virtual-hyperscript');
 var delegator = require('dom-delegator');
