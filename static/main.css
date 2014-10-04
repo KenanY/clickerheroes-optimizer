@@ -1,0 +1,48 @@
+table {
+  border: 2px solid black;
+}
+
+th, td {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+tr:last-child td {
+  border-bottom: 0 !important;
+}
+
+td {
+  text-indent: 5px;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.main {
+  height: 20rem;
+}
+
+.main > div {
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+
+.textarea > textarea {
+  left: 0;
+  position: absolute;
+  resize: none;
+  top: 0;
+}
+
+.textarea > textarea,
+.textarea > pre {
+  background: transparent;
+  font: inherit;
+  padding: 5px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.textarea > pre {
+  visibility: hidden;
+}
