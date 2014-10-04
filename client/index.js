@@ -35,6 +35,7 @@ state(loop.update);
 function render(state) {
   return h('.main', [
     h('.textarea', [
+      h('p', 'Paste your ClickerHeroes save in the textarea below.'),
       h('textarea', {
         value: state.save,
         'ev-change': state.events.change,
