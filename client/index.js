@@ -4,13 +4,13 @@ var struct = require('observ-struct');
 var mainLoop = require('main-loop');
 var h = require('virtual-hyperscript');
 var delegator = require('dom-delegator');
+var format = require('clickerheroes-format');
 var parseSave = require('clickerheroes-save');
 var MultipleEvent = require('geval/multiple');
 
 var heroes = require('./heroes');
 var damage = require('./damage');
 var info = require('./info');
-var format = require('./format');
 
 var state = struct({
   save: value(''),
