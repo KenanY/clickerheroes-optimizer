@@ -1,14 +1,21 @@
-@import "fluidity/normalize"
-@import "fluidity/semantic-grid"
+@import "jeet"
+@import "rupture"
 
 .main
-  grid()
+  //center()
+  cf()
   .textarea
-    grid-space(25%)
+    col(1/3)
+    +mobile()
+      stack()
   .table
-    grid-space(30%)
+    col(1/3)
+    +mobile()
+      stack()
   .output
-    grid-space(45%)
+    col(1/3)
+    +mobile
+      stack()
 
 table {
   border: 2px solid black;
