@@ -23,7 +23,7 @@
     "main-loop": "^2.3.0",
     "observ": "^0.2.0",
     "observ-array": "^2.0.0",
-    "observ-struct": "^5.0.1",
+    "observ-struct": "^6.0.0",
     "virtual-hyperscript": "^4.5.0"
   },
   "devDependencies": {
